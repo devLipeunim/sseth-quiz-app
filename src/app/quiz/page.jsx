@@ -73,7 +73,8 @@ const Page = () => {
   };
 
   return (
-    <div className="container">
+    <div className="wrapper">
+          <div className="container">
       <h1>Web Dev. (Front-End)</h1>
       <div>
         <h2 className="questionTitle">
@@ -133,6 +134,8 @@ const Page = () => {
         )}
       </div>
     </div>
+    </div>
+
   );
 };
 
