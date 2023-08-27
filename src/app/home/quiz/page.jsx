@@ -4,7 +4,6 @@ import quizData from "../../../data";
 import "./quiz.css";
 import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";
-import Button from "@/components/Button/Button";
 
 const Quiz = () => {
   const router = useRouter();
@@ -88,7 +87,7 @@ const Quiz = () => {
       <li
         key={index}
         className={
-          userAnswers[currentQuestion] === option
+          userAnswers[currentSubmitQuestion] === option
             ? "li-selected"
             : option === correctAnswer
             ? "li-correct"
@@ -111,9 +110,9 @@ const Quiz = () => {
   };
   const userScore = calculateScore();
 
-  const scrollDown = () =>{
-    window.scroll(0, 250)
-  }
+  const scrollDown = () => {
+    window.scroll(0, 250);
+  };
 
   if (showResults) {
     return (
@@ -123,8 +122,12 @@ const Quiz = () => {
           <div class="score-container">
             <div className="image"></div>
             <h2 className="subHeader2">Congratulations! {user}</h2>
-            <span className="userScore">You have scored : {userScore.toFixed(2)}%</span>
-            <button type="button" className="scroll" onClick={scrollDown}>See Answers</button>
+            <span className="userScore">
+              You have scored : {userScore.toFixed(2)}%
+            </span>
+            <button type="button" className="scroll" onClick={scrollDown}>
+              See Answers
+            </button>
             {/* <Button text="See Answers"  url=""/> */}
             {/* <a class="link-btn" href="#answers">
               See Answers
@@ -181,6 +184,7 @@ const Quiz = () => {
             >
               Previous
             </button>
+
             <button
               onClick={handleNext}
               className="btn"
@@ -188,9 +192,11 @@ const Quiz = () => {
             >
               Next
             </button>
-            <button onClick={handleSubmit} className="btn submit">
-              Submit
-            </button>
+            {currentQuestion === quizData.length - 1 && (
+              <button onClick={handleSubmit} className="btn submit">
+                Submit
+              </button>
+            )}
           </div>
         </div>
       </div>

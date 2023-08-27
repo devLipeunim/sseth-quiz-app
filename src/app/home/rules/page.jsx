@@ -1,12 +1,19 @@
+"use client";
 import React from "react";
-
-import Link from "next/link";
 import "./rules.css";
+import { useRouter } from "next/navigation";
 
-const page = () => {
+const Page = () => {
+  const router = useRouter();
+  const goQuiz = ()=>{
+    router.push("./quiz")
+  }
+  const goCategories = ()=>{
+    router.push("./categories")
+  }
   return (
-    <div className="container">
-      <div className="wrapper">
+    <div className="rules-container">
+      <div className="rules-wrapper">
         <h3 className="title">Rules</h3>
         <div className="rules">
           <span>
@@ -28,44 +35,19 @@ const page = () => {
           <span>👉 Un-answered questions do not lead to point deduction.</span>
         </div>
         <div className="two-buttons">
-        <Link className="button" href="./categories">
+        <button className="button" onClick={goCategories}>Go back !</button>
+        {/* <Link className="button" href="./categories">
           Go back !
-        </Link>
-        <Link className="button" href="./rules">
-          Start Quiz !
-        </Link>
+        </Link> */}
+        <button className="button" onClick={goQuiz}>Start Quiz !</button>
+        {/* <Link className="button" href="./quiz"> */}
+          
+        {/* </Link> */}
         </div>
 
       </div>
     </div>
-    // <div className="flex-column flex-center">
-    //   <div className="flex-space-btwn flex-center rules-container">
-    //     <h3>Rules</h3>
-    //     <div className="rules flex-col-space-btwn">
-    //       <span>
-    //         👉 Each question is of multiple-choice format, with only one right
-    //         answer per question.
-    //       </span>
-    //       <span>
-    //         👉 Read the question carefully, and click on the option to select it
-    //         as the answer for the question.
-    //       </span>
-    //       <span>
-    //         👉 After responding to the last question, click on "Submit" to end
-    //         the quiz and view the results.
-    //       </span>
-    //       <span>
-    //         👉 For every correct answer you get +5 points and no negative points
-    //         for wrong answers.
-    //       </span>
-    //       <span>👉 Un-answered questions do not lead to point deduction.</span>
-    //     </div>
-    //     <a className="link-btn txt-center mg-1" href="questions.html">
-    //       Start Quiz !
-    //     </a>
-    //   </div>
-    // </div>
   );
 };
 
-export default page;
+export default Page;
