@@ -6,10 +6,10 @@ import { useRouter } from "next/navigation";
 const Page = () => {
   const router = useRouter();
   const goQuiz = ()=>{
-    router.push("./quiz")
-  }
-  const goCategories = ()=>{
     router.push("./categories")
+  }
+  const goHome = ()=>{
+    router.push("./");
   }
   return (
     <div className="rules-container">
@@ -29,20 +29,16 @@ const Page = () => {
             to end the quiz and view the results.
           </span>
           <span>
-            👉 For every correct answer you get +5 points and no negative points
+            👉 For every correct answer you get +1 points and no negative points
             for wrong answers.
           </span>
           <span>👉 Un-answered questions do not lead to point deduction.</span>
         </div>
         <div className="two-buttons">
-        <button className="button" onClick={goCategories}>Go back !</button>
-        {/* <Link className="button" href="./categories">
-          Go back !
-        </Link> */}
+        <button className="button" onClick={goHome}>Go back !</button>
+   
         <button className="button" onClick={goQuiz}>Start Quiz !</button>
-        {/* <Link className="button" href="./quiz"> */}
-          
-        {/* </Link> */}
+        
         </div>
 
       </div>

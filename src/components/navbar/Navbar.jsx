@@ -24,7 +24,8 @@ const Navbar = () => {
       icon: "success",
       confirmButtonText: "Thanks",
     });
-    router.push("./");
+    router.push("/");
+
   };
   return (
     <div className={styles.container}>

@@ -130,7 +130,7 @@ const Onboard = () => {
                 <div className="input-wrap">
                   <input
                     type="text"
-                    minlength="4"
+                    minLength="4"
                     className="input-field"
                     ref={inputField[0]}
                     value={loginName}
@@ -144,7 +144,7 @@ const Onboard = () => {
                 <div className="input-wrap">
                   <input
                     type="password"
-                    minlength="4"
+                    minLength="4"
                     className="input-field"
                     ref={inputField[1]}
                     value={loginPassword}
@@ -204,7 +204,7 @@ const Onboard = () => {
                 <div className="input-wrap">
                   <input
                     type="text"
-                    minlength="4"
+                    minLength="4"
                     className="input-field"
                     ref={inputField[2]}
                     value={signUpName}
@@ -231,7 +231,7 @@ const Onboard = () => {
                 <div className="input-wrap">
                   <input
                     type="password"
-                    minlength="4"
+                    minLength="4"
                     className="input-field"
                     ref={inputField[4]}
                     placeholder="Password"
