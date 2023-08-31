@@ -6,14 +6,14 @@ const quizData = [
     correctAnswer: "<srcipt>",
   },
   {
-    question: "Why would you surround a piece of text with `<h1></h1>` tags?",
+    question: "Which of the following is not a string method in javaScript",
     options: [
-      "to indicate that this text is the main heading on the page",
-      "to make the text bold",
-      "to ensure that search engines treat the keywords as being important for this page",
-      "to demonstrate to screen readers that this text is important",
+      "charAt()",
+      "fill()",
+      "toUpperCase()",
+      "trim()",
     ],
-    correctAnswer: "to indicate that this text is the main heading on the page",
+    correctAnswer: "fill()",
   },
 
   {
@@ -22,7 +22,7 @@ const quizData = [
       "changeContent()",
       "innerHTML()",
       "contentChange()",
-      "textContent()",
+      "textContentChange()",
     ],
     correctAnswer: "innerHTML()",
   },
@@ -115,7 +115,7 @@ const quizData = [
   },
   {
     question: "Which HTML element is not considered a landmark element?",
-    options: ["<form>", "<ul>", "<main>", "<nav>"],
+    options: ["<aside>", "<ul>", "<main>", "<nav>"],
     correctAnswer: "<ul>",
   },
   {
@@ -318,7 +318,7 @@ const quizData = [
       "In supporting browsers, images will load only when they are in or near the visible viewport",
   },
   {
-    question: "Which attribute is uses to add text to an image that will be displayed if the image does not load and read out to screen reader users?",
+    question: "Which attribute is used to add text to an image that will be displayed if the image does not load and read out to screen reader users?",
     options: [
       "title",
       "data",

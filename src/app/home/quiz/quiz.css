@@ -21,7 +21,15 @@ main {
   color: #000105;
   text-align: center;
 }
-
+.appreciation{
+  margin-top: .4rem;
+  text-align: center;
+  margin-bottom: .4rem;
+  font-size: 1.8rem;
+  color: #000105;
+  text-align: center;
+  max-width: 450px;
+}
 .userScore{
   color: #000105;
   margin-bottom: .4rem;
@@ -48,6 +56,11 @@ main {
   background-color: #df1e1e;
 }
 
+.row .downloadBtn{
+  color: #fff;
+  background-color: #407bff;
+}
+
 .btn-disabled {
   background-color: lightgray;
 }
@@ -65,11 +78,15 @@ main {
   background-color: #d8d8d8;
   columns: #fff;
 }
-
-.li-selected {
+.li-selected-question {
   color: #fff;
   background-color: #407bff;
 }
+.li-selected {
+  color: #fff;
+  background-color: #fc5e5e;
+}
+
 
 .li-correct {
   color: #fff;

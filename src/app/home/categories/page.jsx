@@ -14,14 +14,14 @@ import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";
 
 const Page = () => {
-const router = useRouter();
+  const router = useRouter();
   const goFrontEnd = () => {
     Swal.fire({
-      title: "Are you readddy?",
-      text: "😎",
+      title: "😎",
+      text: "Are you ready?",
       icon: "info",
       showCancelButton: true,
-      confirmButtonText: "Yes, I'm in",
+      confirmButtonText: "Yes, I'm",
       cancelButtonText: "No",
       reverseButtons: true,
     }).then(function (result) {
@@ -38,74 +38,78 @@ const router = useRouter();
     });
   };
   const goBackEnd = () => {
-    Swal.fire({
-      title: "Are you readddy?",
-      text: "😎",
-      icon: "info",
-      showCancelButton: true,
-      confirmButtonText: "Yes, I'm in",
-      cancelButtonText: "No",
-      reverseButtons: true,
-    }).then(function (result) {
-      if (result.value) {
-        Swal.fire(
-          "Happy Hacking!",
-          "Unlocking knowledge at the speed of thought",
-          "success"
-        );
-        router.push("./quiz/backEnd");
-      } else if (result.dismiss === "cancel") {
-        Swal.fire("Cancelled!", "You can come back when ready!", "error");
-      }
-    });
+    router.push("/showErrorQuiz");
+
+    // Swal.fire({
+    //   title: "Are you readddy?",
+    //   text: "😎",
+    //   icon: "info",
+    //   showCancelButton: true,
+    //   confirmButtonText: "Yes, I'm in",
+    //   cancelButtonText: "No",
+    //   reverseButtons: true,
+    // }).then(function (result) {
+    //   if (result.value) {
+    //     Swal.fire(
+    //       "Happy Hacking!",
+    //       "Unlocking knowledge at the speed of thought",
+    //       "success"
+    //     );
+    //     router.push("./quiz/backEnd");
+    //   } else if (result.dismiss === "cancel") {
+    //     Swal.fire("Cancelled!", "You can come back when ready!", "error");
+    //   }
+    // });
   };
   const goFullStack = () => {
-    Swal.fire({
-      title: "Are you readddy?",
-      text: "😎",
-      icon: "info",
-      showCancelButton: true,
-      confirmButtonText: "Yes, I'm in",
-      cancelButtonText: "No",
-      reverseButtons: true,
-    }).then(function (result) {
-      if (result.value) {
-        Swal.fire(
-          "Happy Hacking!",
-          "Unlocking knowledge at the speed of thought",
-          "success"
-        );
-        router.push("./quiz/fullStack");
-      } else if (result.dismiss === "cancel") {
-        Swal.fire("Cancelled!", "You can come back when ready!", "error");
-      }
-    });
+    router.push("/showErrorQuiz");
+    // Swal.fire({
+    //   title: "Are you readddy?",
+    //   text: "😎",
+    //   icon: "info",
+    //   showCancelButton: true,
+    //   confirmButtonText: "Yes, I'm in",
+    //   cancelButtonText: "No",
+    //   reverseButtons: true,
+    // }).then(function (result) {
+    //   if (result.value) {
+    //     Swal.fire(
+    //       "Happy Hacking!",
+    //       "Unlocking knowledge at the speed of thought",
+    //       "success"
+    //     );
+    //     router.push("./quiz/fullStack");
+    //   } else if (result.dismiss === "cancel") {
+    //     Swal.fire("Cancelled!", "You can come back when ready!", "error");
+    //   }
+    // });
   };
   const goGraphicsDesign = () => {
-    Swal.fire({
-      title: "Are you readddy?",
-      text: "😎",
-      icon: "info",
-      showCancelButton: true,
-      confirmButtonText: "Yes, I'm in",
-      cancelButtonText: "No",
-      reverseButtons: true,
-    }).then(function (result) {
-      if (result.value) {
-        Swal.fire(
-          "Happy Hacking!",
-          "Unlocking knowledge at the speed of thought",
-          "success"
-        );
-        router.push("./quiz/graphics");
-      } else if (result.dismiss === "cancel") {
-        Swal.fire("Cancelled!", "You can come back when ready!", "error");
-      }
-    });
+    router.push("/showErrorQuiz");
+    // Swal.fire({
+    //   title: "Are you readddy?",
+    //   text: "😎",
+    //   icon: "info",
+    //   showCancelButton: true,
+    //   confirmButtonText: "Yes, I'm in",
+    //   cancelButtonText: "No",
+    //   reverseButtons: true,
+    // }).then(function (result) {
+    //   if (result.value) {
+    //     Swal.fire(
+    //       "Happy Hacking!",
+    //       "Unlocking knowledge at the speed of thought",
+    //       "success"
+    //     );
+    //     router.push("./quiz/graphics");
+    //   } else if (result.dismiss === "cancel") {
+    //     Swal.fire("Cancelled!", "You can come back when ready!", "error");
+    //   }
+    // });
   };
   const goUiUX = () => {
     Swal.fire({
-      title: "Are you readddy?",
+      title: "Are you ready?",
       text: "😎",
       icon: "info",
       showCancelButton: true,
@@ -127,7 +131,7 @@ const router = useRouter();
   };
   const goDeskTop = () => {
     Swal.fire({
-      title: "Are you readddy?",
+      title: "Are you ready?",
       text: "😎",
       icon: "info",
       showCancelButton: true,
@@ -147,37 +151,60 @@ const router = useRouter();
       }
     });
   };
+  const goSoftware = () => {
+    router.push("/showErrorQuiz");
+    // Swal.fire({
+    //   title: "Are you readddy?",
+    //   text: "😎",
+    //   icon: "info",
+    //   showCancelButton: true,
+    //   confirmButtonText: "Yes, I'm in",
+    //   cancelButtonText: "No",
+    //   reverseButtons: true,
+    // }).then(function (result) {
+    //   if (result.value) {
+    //     Swal.fire(
+    //       "Happy Hacking!",
+    //       "Unlocking knowledge at the speed of thought",
+    //       "success"
+    //     );
+    //     router.push("./quiz/fullStack");
+    //   } else if (result.dismiss === "cancel") {
+    //     Swal.fire("Cancelled!", "You can come back when ready!", "error");
+    //   }
+    // });
+  };
 
   return (
     <div className="category-wrapper">
       <h3 className="mg-t-1">Categories</h3>
       <div className="category-wrapper-second category-container">
-        <Link className="txt-md" href="" onClick={goFrontEnd}>
+        <div className="txt-md"  onClick={goFrontEnd}>
           <div className="category-card mg-1">
             <Image className="category-img" src={frontEnd} alt="Front-End" />
             <span className="package">Front-End</span>
           </div>
-        </Link>
-        <Link className="txt-md" href="" onClick={goBackEnd}>
+        </div>
+        <div className="txt-md" onClick={goBackEnd}>
           <div className=" category-card mg-1">
             <Image className="category-img" src={backEnd} alt="Back-End" />
             <span className="package">Back-End</span>
           </div>
-        </Link>
-        <Link className="txt-md" href="" onClick={goFullStack}>
+        </div>
+        <div className="txt-md" onClick={goFullStack}>
           <div className="category-card mg-1">
             <Image className="category-img" src={software} alt="Full-stack" />
             <span className="package">Full-stack</span>
           </div>
-        </Link>
+        </div>
 
-        <Link className="txt-md" href="" onClick={goUiUX}>
+        <div className="txt-md" onClick={goUiUX}>
           <div className="category-card mg-1">
             <Image className="category-img" src={uiux} alt="UI/UX Design" />
             <span className="package">UI/UX Design</span>
           </div>
-        </Link>
-        <Link className="txt-md" href="" onClick={goDeskTop}>
+        </div>
+        <div className="txt-md"  onClick={goDeskTop}>
           <div className="category-card mg-1">
             <Image
               className="category-img"
@@ -186,8 +213,8 @@ const router = useRouter();
             />
             <span className="package">Desktop Publishing</span>
           </div>
-        </Link>
-        <Link className="txt-md" href="" onClick={goGraphicsDesign}>
+        </div>
+        <div className="txt-md"  onClick={goGraphicsDesign}>
           <div className="category-card mg-1">
             <Image
               className="category-img"
@@ -196,13 +223,13 @@ const router = useRouter();
             />
             <span className="package">Graphics Design</span>
           </div>
-        </Link>
-        <Link className="txt-md" href="./quiz/software">
+        </div>
+        <div className="txt-md"  onClick={goSoftware}>
           <div className="category-card mg-1">
             <Image className="category-img" src={software} alt="Software Dev" />
             <span className="package">Software Dev</span>
           </div>
-        </Link>
+        </div>
       </div>
     </div>
   );

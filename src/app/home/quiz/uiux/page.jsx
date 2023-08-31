@@ -1,17 +1,35 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import quizData from "../../../../uiux";
 import "../quiz.css";
 import Swal from "sweetalert2";
+import html2canvas from "html2canvas";
 import { useRouter } from "next/navigation";
-
+import { runFireworks } from "../../../../lib/utils";
 const Quiz = () => {
   const router = useRouter();
   const [user, setUser] = useState("");
+
   useEffect(() => {
     const loggedInUser = localStorage.getItem("loggedInUser");
     setUser(loggedInUser);
   }, []);
+
+
+  const downloadResult = async () => {
+    const scoreContainer = document.getElementById("scoreContainer");
+    console.log("isDownload?");
+    try {
+      const canvas = await html2canvas(scoreContainer, { scale: 3 });
+      const link = document.createElement("a");
+      link.download = `${user}.png`;
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+    } catch (error) {
+      console.error("Error generating canvas:", error);
+    }
+  };
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentSubmitQuestion, setCurrentSubmitQuestion] = useState(0);
 
@@ -53,6 +71,7 @@ const Quiz = () => {
       if (result.value) {
         Swal.fire("Submitted!", "You have successfully submitted", "success");
         setShowResults(true);
+        runFireworks();
       } else if (result.dismiss === "cancel") {
         Swal.fire("Cancelled!", "You can continue your work", "error");
       }
@@ -71,7 +90,7 @@ const Quiz = () => {
         key={index}
         onClick={() => handleAnswer(option)}
         className={
-          userAnswers[currentQuestion] === option ? "li-selected" : "li-hover"
+          userAnswers[currentQuestion] === option ? "li-selected-question" : "li-hover"
         }
       >
         <span>{option}</span>
@@ -122,19 +141,18 @@ const Quiz = () => {
       <div className="wrapper">
         <div className="container">
           <h1>Quiz Results</h1>
-          <div class="score-container">
+          <div class="score-container" id="scoreContainer">
             <div className="image"></div>
-            <h2 className="subHeader2">Congratulations! {user}</h2>
+            <h2 className="appreciation">
+              Thank you {user} <br />
+              for participating in the 5 Weeks Summer Tech Bootcamp v1.0
+            </h2>
             <span className="userScore">
-              You have scored : {userScore.toFixed(2)}%
+              You have scored : {userScore.toFixed(2)}% in this Test
             </span>
             <button type="button" className="scroll" onClick={scrollDown}>
               See Answers
             </button>
-            {/* <Button text="See Answers"  url=""/> */}
-            {/* <a class="link-btn" href="#answers">
-              See Answers
-            </a> */}
           </div>
           <h3 className="submit-question">
             Question: {currentSubmitQuestion + 1}{" "}
@@ -160,6 +178,9 @@ const Quiz = () => {
                 disabled={currentSubmitQuestion === quizData.length - 1}
               >
                 Next
+              </button>
+              <button onClick={downloadResult} className="btn downloadBtn">
+                Download Result
               </button>
             </div>
           </div>
