@@ -13,7 +13,10 @@ const Onboard = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const loggedInUser = localStorage.getItem("loggedInUser");
+    const loggedInUser =
+      typeof window !== "undefined"
+        ? localStorage.getItem("loggedInUser")
+        : null;
     if (loggedInUser) {
       router.push("./home");
     }
@@ -94,20 +97,22 @@ const Onboard = () => {
 
   // this is only for the bootcamp. comment this after the bootcamp
   //
-  localStorage.setItem("userName1", "Weagle Ghandhi");
-  localStorage.setItem("userName2", "Favour Elijah");
-  localStorage.setItem("userName3", "Blessing Michael");
+  if (typeof window !== "undefined") {
+    localStorage.setItem("userName1", "Weagle Ghandhi");
+    localStorage.setItem("userName2", "Favour Elijah");
+    localStorage.setItem("userName3", "Blessing Michael");
 
-  localStorage.setItem("userName4", "Israel Odutola");
-  localStorage.setItem("userName5", "David Aiyede");
-  localStorage.setItem("userName6", "Gold Ogunseitan");
+    localStorage.setItem("userName4", "Israel Odutola");
+    localStorage.setItem("userName5", "David Aiyede");
+    localStorage.setItem("userName6", "Gold Ogunseitan");
 
-  localStorage.setItem("userName7", "Nosakhare Omoruyi");
-  localStorage.setItem("userName8", "Afeez Awolumate");
-  localStorage.setItem("userName9", "Tobiloba Afuwape");
+    localStorage.setItem("userName7", "Nosakhare Omoruyi");
+    localStorage.setItem("userName8", "Afeez Awolumate");
+    localStorage.setItem("userName9", "Tobiloba Afuwape");
 
-  localStorage.setItem("admin", "SSETH");
-  localStorage.setItem("password", "2023");
+    localStorage.setItem("admin", "SSETH");
+    localStorage.setItem("password", "2023");
+  }
 
   const login = (e) => {
     e.preventDefault();
@@ -153,7 +158,7 @@ const Onboard = () => {
       //   confirmButtonText: "Thanks",
       // });
 
-      router.push("./showError")
+      router.push("./showError");
     }
   };
 
