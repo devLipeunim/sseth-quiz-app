@@ -43,11 +43,11 @@ body {
   margin: 0;
   padding: 0;
   height: auto;
-  font-family: "Barlow", sans-serif;
+  /* font-family: "Barlow", sans-serif; */
   background: #695681;
 }
 
-.wrapper {
+.wrapper2 {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
@@ -55,7 +55,7 @@ body {
   height: 100vh;
   overflow-x: hidden;
 }
-.wrapper .container {
+.wrapper2 .container {
   margin: 0 auto;
   transition: all 0.4s ease;
   display: flex;
@@ -63,17 +63,17 @@ body {
   align-items: center;
   position: relative;
 }
-.wrapper .container .scene {
+.wrapper2 .container .scene {
   position: absolute;
   width: 100vw;
   height: 100vh;
   vertical-align: middle;
 }
-.wrapper .container .one,
-.wrapper .container .two,
-.wrapper .container .three,
-.wrapper .container .circle,
-.wrapper .container .p404 {
+.wrapper2 .container .one,
+.wrapper2 .container .two,
+.wrapper2 .container .three,
+.wrapper2 .container .circle,
+.wrapper2 .container .p404 {
   width: 60%;
   height: 60%;
   top: 20% !important;
@@ -81,11 +81,11 @@ body {
   min-width: 400px;
   min-height: 400px;
 }
-.wrapper .container .one .content,
-.wrapper .container .two .content,
-.wrapper .container .three .content,
-.wrapper .container .circle .content,
-.wrapper .container .p404 .content {
+.wrapper2 .container .one .content,
+.wrapper2 .container .two .content,
+.wrapper2 .container .three .content,
+.wrapper2 .container .circle .content,
+.wrapper2 .container .p404 .content {
   width: 600px;
   height: 600px;
   display: flex;
@@ -102,11 +102,11 @@ body {
     width: 0;
   }
 }
-.wrapper .container .one .content .piece,
-.wrapper .container .two .content .piece,
-.wrapper .container .three .content .piece,
-.wrapper .container .circle .content .piece,
-.wrapper .container .p404 .content .piece {
+.wrapper2 .container .one .content .piece,
+.wrapper2 .container .two .content .piece,
+.wrapper2 .container .three .content .piece,
+.wrapper2 .container .circle .content .piece,
+.wrapper2 .container .p404 .content .piece {
   width: 200px;
   height: 80px;
   display: flex;
@@ -128,11 +128,11 @@ body {
   }
 }
 @media screen and (max-width: 799px) {
-  .wrapper .container .one,
-.wrapper .container .two,
-.wrapper .container .three,
-.wrapper .container .circle,
-.wrapper .container .p404 {
+  .wrapper2 .container .one,
+.wrapper2 .container .two,
+.wrapper2 .container .three,
+.wrapper2 .container .circle,
+.wrapper2 .container .p404 {
     width: 90%;
     height: 90%;
     top: 5% !important;
@@ -142,11 +142,11 @@ body {
   }
 }
 @media screen and (max-height: 660px) {
-  .wrapper .container .one,
-.wrapper .container .two,
-.wrapper .container .three,
-.wrapper .container .circle,
-.wrapper .container .p404 {
+  .wrapper2 .container .one,
+.wrapper2 .container .two,
+.wrapper2 .container .three,
+.wrapper2 .container .circle,
+.wrapper2 .container .p404 {
     min-width: 280px;
     min-height: 280px;
     width: 60%;
@@ -155,7 +155,7 @@ body {
     left: 20% !important;
   }
 }
-.wrapper .container .text {
+.wrapper2 .container .text {
   width: 60%;
   height: 40%;
   min-width: 400px;
@@ -171,12 +171,12 @@ body {
   }
 }
 @media screen and (max-width: 799px) {
-  .wrapper .container .text {
+  .wrapper2 .container .text {
     min-height: 400px;
     height: 80%;
   }
 }
-.wrapper .container .text article {
+.wrapper2 .container .text article {
   width: 400px;
   position: absolute;
   bottom: 0;
@@ -191,18 +191,18 @@ body {
   transform: translateX(-50%);
 }
 @media screen and (max-width: 799px) {
-  .wrapper .container .text article {
+  .wrapper2 .container .text article {
     width: 100%;
   }
 }
-.wrapper .container .text article p {
+.wrapper2 .container .text article p {
   color: white;
   font-size: 18px;
   letter-spacing: 0.6px;
   margin-bottom: 40px;
   text-shadow: 6px 6px 10px #32243E;
 }
-.wrapper .container .text article button {
+.wrapper2 .container .text article button {
   height: 40px;
   padding: 0 30px;
   border-radius: 50px;
@@ -216,13 +216,13 @@ body {
   font-size: 12px;
   transition: all 0.3s ease;
 }
-.wrapper .container .text article button:hover {
+.wrapper2 .container .text article button:hover {
   box-shadow: 0px 10px 10px -10px rgba(54, 24, 79, 0.5);
   transform: translateY(5px);
   background: #FB8A8A;
   color: white;
 }
-.wrapper .container .p404 {
+.wrapper2 .container .p404 {
   font-size: 200px;
   font-weight: 700;
   letter-spacing: 4px;
@@ -236,7 +236,7 @@ body {
   animation-delay: 1.2s;
 }
 @media screen and (max-width: 799px) {
-  .wrapper .container .p404 {
+  .wrapper2 .container .p404 {
     font-size: 100px;
   }
 }
@@ -246,17 +246,17 @@ body {
     transform: scale(10) skew(20deg, 20deg);
   }
 }
-.wrapper .container .p404:nth-of-type(2) {
+.wrapper2 .container .p404:nth-of-type(2) {
   color: #36184F;
   z-index: 1;
   animation-delay: 1s;
   filter: blur(10px);
   opacity: 0.8;
 }
-.wrapper .container .circle {
+.wrapper2 .container .circle {
   position: absolute;
 }
-.wrapper .container .circle:before {
+.wrapper2 .container .circle:before {
   content: "";
   position: absolute;
   width: 800px;
@@ -276,12 +276,12 @@ body {
   }
 }
 @media screen and (max-width: 799px) {
-  .wrapper .container .circle:before {
+  .wrapper2 .container .circle:before {
     width: 400px;
     height: 400px;
   }
 }
-.wrapper .container .one .content:before {
+.wrapper2 .container .one .content:before {
   content: "";
   position: absolute;
   width: 600px;
@@ -292,15 +292,15 @@ body {
   animation: circle 0.8s 0.4s cubic-bezier(1, 0.06, 0.25, 1) backwards;
 }
 @media screen and (max-width: 799px) {
-  .wrapper .container .one .content:before {
+  .wrapper2 .container .one .content:before {
     width: 300px;
     height: 300px;
   }
 }
-.wrapper .container .one .content .piece {
+.wrapper2 .container .one .content .piece {
   background: linear-gradient(90deg, #8077EA 13.7%, #EB73FF 94.65%);
 }
-.wrapper .container .one .content .piece:nth-child(1) {
+.wrapper2 .container .one .content .piece:nth-child(1) {
   right: 15%;
   top: 18%;
   height: 30px;
@@ -308,7 +308,7 @@ body {
   animation-delay: 0.5s;
   animation-name: pieceRight;
 }
-.wrapper .container .one .content .piece:nth-child(2) {
+.wrapper2 .container .one .content .piece:nth-child(2) {
   left: 15%;
   top: 45%;
   width: 150px;
@@ -316,7 +316,7 @@ body {
   animation-delay: 1s;
   animation-name: pieceLeft;
 }
-.wrapper .container .one .content .piece:nth-child(3) {
+.wrapper2 .container .one .content .piece:nth-child(3) {
   left: 10%;
   top: 75%;
   height: 20px;
@@ -324,10 +324,10 @@ body {
   animation-delay: 1.5s;
   animation-name: pieceLeft;
 }
-.wrapper .container .two .content .piece {
+.wrapper2 .container .two .content .piece {
   background: linear-gradient(90deg, #FFEDC0 0%, #FF9D87 100%);
 }
-.wrapper .container .two .content .piece:nth-child(1) {
+.wrapper2 .container .two .content .piece:nth-child(1) {
   left: 0%;
   top: 25%;
   height: 40px;
@@ -335,7 +335,7 @@ body {
   animation-delay: 2s;
   animation-name: pieceLeft;
 }
-.wrapper .container .two .content .piece:nth-child(2) {
+.wrapper2 .container .two .content .piece:nth-child(2) {
   right: 15%;
   top: 35%;
   width: 180px;
@@ -343,7 +343,7 @@ body {
   animation-delay: 2.5s;
   animation-name: pieceRight;
 }
-.wrapper .container .two .content .piece:nth-child(3) {
+.wrapper2 .container .two .content .piece:nth-child(3) {
   right: 10%;
   top: 80%;
   height: 20px;
@@ -351,10 +351,10 @@ body {
   animation-delay: 3s;
   animation-name: pieceRight;
 }
-.wrapper .container .three .content .piece {
+.wrapper2 .container .three .content .piece {
   background: #FB8A8A;
 }
-.wrapper .container .three .content .piece:nth-child(1) {
+.wrapper2 .container .three .content .piece:nth-child(1) {
   left: 25%;
   top: 35%;
   height: 20px;
@@ -362,7 +362,7 @@ body {
   animation-name: pieceLeft;
   animation-delay: 3.5s;
 }
-.wrapper .container .three .content .piece:nth-child(2) {
+.wrapper2 .container .three .content .piece:nth-child(2) {
   right: 10%;
   top: 55%;
   width: 140px;
@@ -370,7 +370,7 @@ body {
   animation-name: pieceRight;
   animation-delay: 4s;
 }
-.wrapper .container .three .content .piece:nth-child(3) {
+.wrapper2 .container .three .content .piece:nth-child(3) {
   left: 40%;
   top: 68%;
   height: 20px;

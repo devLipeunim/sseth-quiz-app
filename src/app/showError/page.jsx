@@ -10,7 +10,7 @@ const Page = () => {
     router.push("./");
   };
   return (
-    <section className="wrapper">
+    <section className="wrapper2">
       <div className="container">
         <div id="scene" className="scene" data-hover-only="false">
           <div className="circle" data-depth="1.2"></div>
